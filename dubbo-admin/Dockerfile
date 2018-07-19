@@ -2,7 +2,8 @@ FROM tomcat
 
 MAINTAINER jz_1106@163.com
 
-RUN rm -Rf /usr/local/tomcat/docs manager host-manager examples;
+RUN rm -Rf webapps/docs webapps/manager webapps/host-manager \
+webapps/examples webapps/ROOT;
 
-#COPY ROOT /usr/local/tomcat/webapps/
+COPY ROOT webapps/ROOT
 
